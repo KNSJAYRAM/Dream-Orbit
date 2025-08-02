@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DreamOrbit - Space Beyond Imagination</title>
   <link rel="stylesheet" href="style.css">
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
   <div class="stars"></div>
   <header>
-    <nav>
+    <nav class="navbar">
       <span class="logo"><span class="orbit-animated">DreamOrbit</span></span>
     </nav>
   </header>
@@ -26,7 +29,7 @@
       <p class="tagline">Where dreams and galaxies collide.</p>
       <a href="#" class="cta-btn">Book Your Dream Now</a>
     </section>
-    <section class="features">
+    <section class="features" data-scroll-section>
       <h2>What We Offer</h2>
       <ul>
         <li><strong>DreamSync™ Capsules:</strong> Sleep pods that launch you into space & dreamspace.</li>
@@ -34,12 +37,12 @@
         <li><strong>Zero-G Dream Cruises:</strong> Experience dreams while floating in Earth's orbit.</li>
       </ul>
     </section>
-    <section class="testimonials">
+    <section class="testimonials" data-scroll-section>
       <h2>What People Are Saying</h2>
       <p class="quote">"I flew through Saturn's rings in my dream. When I woke up, I cried. It felt more real than life on Earth."<br><span class="testimonial-author">— Jayram.K -Founder(DreamOrbit)</span></p>
       <p class="quote">"Better than any VR or psychedelic. It was <em>me</em>, but in the stars."<br><span class="testimonial-author">— Mahesh.N -Co-Founder(DreamOrbit)</span></p>
     </section>
-    <section class="cta">
+    <section class="cta" data-scroll-section>
       <h2>Launch Your Mind to the Stars</h2>
       <a href="#" class="cta-btn">Start Your Journey</a>
     </section>
@@ -47,5 +50,7 @@
   <footer>
     <p>&copy; 2025 DreamOrbit. All rights reserved.</p>
   </footer>
+
+  <script src="animations.js"></script>
 </body>
 </html>
