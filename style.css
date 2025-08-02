@@ -1,4 +1,3 @@
-/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +12,7 @@ body {
   flex-direction: column;
   position: relative;
   overflow-x: hidden;
+  opacity: 1;
 }
 .stars {
   position: fixed;
@@ -108,8 +108,7 @@ header {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   color: #e0e7ff;
-  opacity: 0;
-  animation: fadeInUp 1.5s 0.5s forwards;
+  opacity: 1;
 }
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
@@ -128,13 +127,14 @@ header {
   cursor: pointer;
   text-decoration: none;
   letter-spacing: 1px;
-  opacity: 0;
-  transform: scale(0.95);
-  animation: fadeInUp 1.5s 1.1s forwards;
+  opacity: 1;
+  transform: scale(1);
   transition: background 0.3s, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: transform, box-shadow;
   perspective: 600px;
   margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 10;
 }
 .cta-btn:hover, .cta-btn:focus-visible {
   background: linear-gradient(90deg, #1fd1f9, #e100ff);
@@ -150,8 +150,7 @@ header {
   text-align: center;
   z-index: 1;
   position: relative;
-  opacity: 0;
-  animation: fadeInUp 1.5s forwards;
+  opacity: 1;
 }
 .features {
   background: linear-gradient(120deg, #1fd1f933 0%, #ff6ec422 100%);
@@ -161,7 +160,6 @@ header {
   box-shadow: 0 6px 32px 0 #1fd1f933;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  animation: featuresPop 1.2s 1.5s cubic-bezier(0.68,-0.55,0.27,1.55) both;
 }
 @keyframes featuresPop {
   0% { opacity: 0; transform: scale(0.85) translateY(40px); }
@@ -210,7 +208,6 @@ header {
   border-image: linear-gradient(90deg, #1fd1f9, #ff6ec4) 1;
   box-shadow: 0 6px 32px 0 #ff6ec433;
   margin-bottom: 2rem;
-  animation: testimonialsFade 1.2s 2.1s cubic-bezier(0.68,-0.55,0.27,1.55) both;
 }
 @keyframes testimonialsFade {
   0% { opacity: 0; transform: translateY(40px) scale(0.85); }
@@ -238,10 +235,8 @@ header {
   max-width: 500px;
   width: 100%;
   border: 1.5px solid #fff2;
-  opacity: 0;
-  animation: testimonialPop 1.2s 2.3s cubic-bezier(0.68,-0.55,0.27,1.55) both;
+  opacity: 1;
 }
-.testimonials .quote:nth-child(3) { animation-delay: 2.6s; }
 @keyframes testimonialPop {
   0% { opacity: 0; transform: scale(0.85) translateY(40px); }
   80% { opacity: 1; transform: scale(1.04) translateY(-6px); }
@@ -254,9 +249,9 @@ header {
   border-image: linear-gradient(90deg, #f7971e, #a8ff78) 1;
   box-shadow: 0 6px 32px 0 #f7971e33;
   margin-bottom: 2.5rem;
-  animation: ctaPulse 1.2s 2.7s cubic-bezier(0.68,-0.55,0.27,1.55) both;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  z-index: 5;
 }
 @keyframes ctaPulse {
   0% { opacity: 0; transform: scale(0.85) translateY(40px); }
